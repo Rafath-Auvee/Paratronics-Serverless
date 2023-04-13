@@ -56,7 +56,7 @@ const run = async () => {
       res.send({ accessToken });
     });
 
-    app.get("/myitems", verifyJWT, async (req, res) => {
+    app.get("/myitems", async (req, res) => {
       const decodedEmail = req.decoded.email;
       const email = req.query.email;
       console.log(decodedEmail, email);
